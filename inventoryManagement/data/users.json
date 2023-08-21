@@ -1,0 +1,14 @@
+[
+    {
+        "email": "dan@email.com",
+        "id": "159785db-281d-4ed8-89fe-2e288b73f05b",
+        "isAdmin": false,
+        "hash": "$2b$10$52mSNHRcHrTKxDhTs7v28.9ZaWBk19s6jg0rhn0aKLQrTtGvqjMXS"
+    },
+    {
+        "email": "danThe2th@email.com",
+        "id": "2bd19698-eb19-454d-bf42-2df8540ac0cd",
+        "isAdmin": false,
+        "hash": "$2b$10$grOYdL7aI1BxuyyJLqjMi.EXE8isQxhT8eNYD0FNQcAMiLfk8jKnK"
+    }
+]
