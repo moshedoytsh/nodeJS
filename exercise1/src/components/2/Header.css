@@ -1,0 +1,22 @@
+.header {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.header * {
+    padding: 4px;
+    margin: 2px;
+}
+
+.dark-header {
+    color: white;
+    background-color: rgb(49, 49, 49);
+}
+
+.light-header {
+    background-color: white;
+    color: rgb(49, 49, 49);
+}

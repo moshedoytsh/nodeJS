@@ -13,8 +13,7 @@ function filterItems(items, filterFn) {
 }
 // Step 4: הפונקציה מקבלת מערך של פריטים ומדפיסה את כל המידע הרלוונטי לגבי כל פריט
 function printItemsData(items) {
-    for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
-        var i = items_1[_i];
+    for (let i of items) {
         console.log('type:', i.type);
         console.log('title:', i.title);
         if ('author' in i)
@@ -24,7 +23,7 @@ function printItemsData(items) {
     }
 }
 // Test data
-var libraryItems = [
+const libraryItems = [
     { type: ItemType.Book, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
     { type: ItemType.DVD, title: 'Inception', duration: 148 },
     { type: ItemType.Book, title: 'To Kill a Mockingbird', author: 'Harper Lee' },
@@ -34,13 +33,13 @@ var libraryItems = [
 // Step 5:  הדפיסו את כל המידע הנתון 
 printItemsData(libraryItems);
 // Step 6: ממשו את פונקצית הפילטור כך שתחזיר סרטים ארוכים משעתיים והדפיסו את המערך 
-var TWO_HOURS = 120;
+const TWO_HOURS = 120;
 function DVDLongerThan2H(element) {
     return (element.type === ItemType.DVD && element.duration > TWO_HOURS);
 }
-console.log('longers:', printItemsData(filterItems(libraryItems, DVDLongerThan2H)));
+printItemsData(filterItems(libraryItems, DVDLongerThan2H));
 // Step 7:  Harper Lee ממשו את פונקצית הפילטור כך שתחזיר רק ספרים של
 function bookOfHarperLee(element) {
     return (element.type === ItemType.Book && element.author === 'Harper Lee');
 }
-console.log('books of:', printItemsData(filterItems(libraryItems, bookOfHarperLee)));
+printItemsData(filterItems(libraryItems, bookOfHarperLee));

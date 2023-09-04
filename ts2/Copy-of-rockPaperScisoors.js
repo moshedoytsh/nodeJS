@@ -1,3 +1,4 @@
+"use strict";
 // בנו תכנית שמדמה את המשחק אבן נייר ומספריים
 // התכנית תגדיר מי המנצח לפי חוקיות המשחק
 // אבן מנצח מספריים שמנצחות נייר שמנצח אבן
@@ -7,7 +8,7 @@ var ChoiceEnum;
     ChoiceEnum[ChoiceEnum["paper"] = 1] = "paper";
     ChoiceEnum[ChoiceEnum["scissors"] = 2] = "scissors";
 })(ChoiceEnum || (ChoiceEnum = {}));
-var options = {
+const options = {
     rockrock: 'tie',
     rockpaper: 'player2',
     rockscissors: 'player1',
@@ -24,6 +25,6 @@ function playGame(player1, player2) {
     }
     return options[player1 + player2];
 }
-var play = playGame('scissors', 'rock');
+const play = playGame('rock', 'scissors');
 console.log(play);
 //Output: player1 or player2 or tie
